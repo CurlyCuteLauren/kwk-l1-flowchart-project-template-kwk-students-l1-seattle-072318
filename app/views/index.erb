@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>Coffee Quest</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdn.pixabay.com/photo/2015/12/08/00/26/coffee-shop-1081713_1280.jpg">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('https://cdn.pixabay.com/photo/2015/12/08/00/26/coffee-shop-1081713_1280.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p>Coffee Quest</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('Coffee Finder').style.display='block'" class="w3-button w3-black">Coffee Finder</button></p>
+    <p><button onclick="document.getElementById('About Us').style.display='block'" class="w3-button w3-black">About Us</button></p>
+    <p><button onclick="document.getElementById('Contact Us').style.display='block'" class="w3-button w3-black">Contact Us</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Created by </p>
+    <h3><font color="white"><p class="w3-large">Sydney Burns,   Kyla Ulibarri,   Lin Miyamoto,   Lauren Ziegele</p></font></h3>
+    
+  </div>
+</div>
+
+<!-- Coffee Finder Modal -->
+<div id="Coffee Finder" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('Coffee Finder').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Coffee  Quiz</h1>
+    </div>
+    <div class="w3-container w3-black">
+    <form action="/results" method="post">
+        
+      <h2>Where Are You Looking for Coffee?</h2>
+      <br>
+        <input type="radio" name="gender" value="20">North Seattle<br>
+        <input type="radio" name="gender" value="30">Downtown Seattle<br>
+        <input type="radio" name="gender" value="40">Tacoma<br>
+        
+        <h2>How Important is Latte Art?</h2>
+        <input type="radio" name="sport" value="1">Super duper!<br>
+        <input type="radio" name="sport" value="2">Not too vital<br>
+        <!--<input type="radio" name="restriction" value="6">None<br>-->
+        
+        <h2>Preferred Ambience</h2>
+        <input type="radio" name="code" value="1" >Modern<br>
+        <input type="radio" name="code" value="2">Warm and cozy<br> <br>
+        <!--<input type="radio" name="thing" value="2">Nuts<br>-->
+        
+        <h2>Do You Need Food?</h2>
+        <input type="radio" name="party" value="1">Totally!<br>
+        <input type="radio" name="party" value="2"> Not so much<br>
+        
+        <h2>Should the Beans be Roasted In-House?</h2>
+        <input type="radio" name="bowl" value="1">Of course<br>
+        <input type="radio" name="bowl" value="2">I don't care<br>
+
+          <!--the values are the numbers and each number is important because what these -->
+          <!--numbers add up to (number pathway/combo) determines the kind of cookie they'll have as a result-->
+
+          <button type = "submit" class="new"> See your coffee suggestion here </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--About Us Modul-->
+<div id="About Us" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('About Us').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>About Us</h1>
+    </div>
+    <div class="w3-container">
+      <center><h4>Coffee Quest is a fun way to find your perfect cup.  It has you take a quiz that tells us about your taste in coffee places and picks one to match you to your new favorite coffee shop.</h4></center>
+      <center><h1>Meet The Teem</h1></center>
+      <center><h4>Meet Lin! She is 14 years old, LOVES sushi, and she plays the dan tranh.</h4></center>
+      <center><h4>Meet Sydney! She is 18 years old, her favorite food is grapefruit, and she LOVES black labs. </h4></center>
+      <center><h4>Meet Kyla! She is 15 years old, likes apples, and is fond of the color purple. </h4></center>
+      <center><h4>Meet Lauren! She is 17 years old, could eat potatoes all day, and has had dogs her whole life.</h4></center>
+    </div>
+  </div>
+</div>
+<!-- Contact Us Modal -->
+<div id="Contact Us" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('Contact Us').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact Us</h1>
+    </div>
+    <div class="w3-container">
+      <p>Contact us if the website isn't working for you, if you have questions about us or what we do, or if you want to tell us what you like about the site:</p>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="People"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+        <p><button class="w3-button" type="submit">SEND MESSAGE</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
